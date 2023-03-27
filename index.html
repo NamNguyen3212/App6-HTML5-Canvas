@@ -55,6 +55,11 @@ ctx.strokeText("Nam Nguyen", 10, 50);
   var img = document.getElementById("polarBear");
     ctx.drawImage(img,0,0,c.width,c.height);
 }
+	function clearCanvas() {
+  var canvas = document.getElementById("myCanvas");
+  var context = canvas.getContext("2d");
+  context.clearRect(0, 0, canvas.width, canvas.height);
+}
 </script>
 
 
