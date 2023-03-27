@@ -20,7 +20,7 @@ Brief Description of Goal of Code:
 To make a canvas and draw stuff in it.
  
 Known Issues:
-there are none.
+there are none. -->
 	
    <head> 
       <title>App6---HTML5-Canvas</title>  
@@ -30,33 +30,33 @@ there are none.
       <link rel="stylesheet" href="w3-colors-flat.css">
    </head> 
 
- <img id="polarBear" src="https://media-cldnry.s-nbcnews.com/image/upload/streams/2014/February/140225/2D11741327-105187-lisa-granshawAAEA3BA7-DBD0-2809-3D75-A303123C3B8F.jpg" alt="The Scream" width="0" height="0"> 
- <canvas id="myCanvas" width="300" height="200" style="border:1px solid #000000;"> 
+ <img id="polarBear" src="https://media-cldnry.s-nbcnews.com/image/upload/streams/2014/February/140225/2D11741327-105187-lisa-granshawAAEA3BA7-DBD0-2809-3D75-A303123C3B8F.jpg" alt="The Scream" width="0" height="0"> <!--creates an image id and its source so that the function myCanvas can find the image and upload it onto the canvas.-->
+ <canvas id="myCanvas" width="300" height="200" style="border:1px solid #000000;"> <!--creates a canvas with a border-->
 </canvas> 
 <script>
 function lol(){
-  var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-ctx.beginPath();
-ctx.rect(20, 20, 30,50 );
-ctx.stroke();
+  var c = document.getElementById("myCanvas"); //retrieves a reference to myCanvas and stores it in the "c" variable//
+var ctx = c.getContext("2d"); //specifies that the rendering context is going to be in 2d and stores it into variable ctx//
+ctx.beginPath();// tells the rendering context to begin a new path//
+ctx.rect(20, 20, 30,50 );// start the new path on coordinates (20,20) and outline a rectangle with a 30 width and 50 length//
+ctx.stroke(); //paints the rectangle//
 }
 function bob(){
-  var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-ctx.font = "20px Arial";
-ctx.strokeText("Nam Nguyen", 10, 50);
+  var c = document.getElementById("myCanvas");//retrieves a reference to myCanvas and stores it in the "c" variable//
+var ctx = c.getContext("2d");//specifies that the rendering context is going to be in 2d and stores it into variable ctx//
+ctx.font = "20px Arial"; // sets the font type and size//
+ctx.strokeText("Nam Nguyen", 10, 50);//draw the text Nam Nguyen at the coordinates (10,50)//
 }
 	function myCanvas() {
-  var c = document.getElementById("myCanvas");
-  var ctx = c.getContext("2d");
-  var img = document.getElementById("polarBear");
-    ctx.drawImage(img,0,0,c.width,c.height);
+  var c = document.getElementById("myCanvas");//retrieves a reference to myCanvas and stores it in the "c" variable//
+  var ctx = c.getContext("2d");//specifies that the rendering context is going to be in 2d and stores it into variable ctx//
+  var img = document.getElementById("polarBear");//retrieves the image polarBear and stores it in variable img//
+    ctx.drawImage(img,0,0,c.width,c.height);//uploads the image onto the canvas to fit the canvas width and heigth. I HAD GPT HELP ME WITH THIS ONE//
 }
 	function clearCanvas() {
-  var canvas = document.getElementById("myCanvas");
-  var context = canvas.getContext("2d");
-  context.clearRect(0, 0, canvas.width, canvas.height);
+  var canvas = document.getElementById("myCanvas");//retrieves a reference to myCanvas and stores it in the "c" variable//
+  var context = canvas.getContext("2d");//specifies that the rendering context is going to be in 2d and stores it into variable ctx//
+  context.clearRect(0, 0, canvas.width, canvas.height);//clear the whole canvas' specified width and length starting at coordinates (0,0)//
 }
 </script>
 
@@ -88,10 +88,10 @@ ctx.strokeText("Nam Nguyen", 10, 50);
 </div>
 	
 <div id="content" class="w3-container">
-   <a href="#one"  onclick="lol();" class="w3-btn w3-black"> Click Me! </a> <br>
-   <a href="#one"  onclick="bob();" class="w3-btn w3-black"> Turtles! </a>  <br>
-   <a href="#one"  onclick="myCanvas();" class="w3-btn w3-black"> wrong Button </a>  <br>
-   <a href="#one"  onclick="clearCanvas();" class="w3-btn w3-black"> Self Destruct </a>
+   <a href="#one"  onclick="lol();" class="w3-btn w3-black"> Click Me! </a> <br> <!-- creates the button that activates function lol(); to draw a rectangle within the canvas-->
+   <a href="#one"  onclick="bob();" class="w3-btn w3-black"> Turtles! </a>  <br> <!-- creates the button that activates function bob(); to draw my name onto the canvas-->
+   <a href="#one"  onclick="myCanvas();" class="w3-btn w3-black"> wrong Button </a>  <br> <!--creates the button that activates function myCanvas(); to upload an image-->
+   <a href="#one"  onclick="clearCanvas();" class="w3-btn w3-black"> Self Destruct </a> <!--creates the button that activates function clearCanvas(); to clear the entire canvas.-->
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
