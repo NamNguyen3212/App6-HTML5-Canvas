@@ -36,9 +36,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
  <canvas id="myCanvas" width="300" height="200" style="border:1px solid #000000;">
 </canvas> 
 <script>
-var docMod = document.lastModified; // loads last modified time stamp into docMod variable
-alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
-console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
+function lol(){
+  var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.rect(20, 20, 30,50 );
+ctx.stroke();
+}
 </script>
 
 
